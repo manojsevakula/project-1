@@ -46,5 +46,20 @@
             <url>http://54.205.219.216:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
+    <pluginManagement>
+    <plugins>
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>
+        </plugin>
+    </plugins>
+    </pluginManagement>
+    <properties>
+        <sonar.projectKey>simple-java</sonar.projectKey>
+        <sonar.projectName>Simple Java App</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.login>${env.SONAR_AUTH_TOKEN}</sonar.login>
+    </properties>
 </project>
 
